@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  text-shadow: -1px -1px 0 white, 1px 1px 0 #333,1px 1px 0 #444;
+}
+
+.card-side {
+  height: 100%;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  /* box-shadow: 0 3rem 3rem rgb(0 0 0 / 20%); */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.flip .card-front {
+  transform: rotateY(-180deg);
+}
+
+.flip .card-back {
+  transform: rotateY(0);
+}
+
+.card-back .check-icon {
+  display: none;
+}
+
+.success .card-back .check-icon {
+  display: inline-block;
+}
+
+.success .card-back {
+  cursor: not-allowed;
+}
